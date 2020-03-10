@@ -56,9 +56,9 @@ $rows = $pessoa->buscarTodos($connection);
             <td><?php echo $contato->nome ?></td>
             <td><?php echo $contato->email ?></td>
             <td><?php echo $contato->fone ?></td>
-            <td><a href="contato_editar.php?=<?php echo $contato->id ?>">Atualizar</a>
+            <td><a href="contato_editar.php?id=<?php echo $contato->id ?>">Atualizar</a>
               <strong>|</strong>
-              <a href="contato_excluir.php?=<?php echo $contato->id ?>">Excluir</a></td>
+              <a href="contato_excluir.php?id=<?php echo $contato->id ?>">Excluir</a></td>
             </td>
           </tr>
 

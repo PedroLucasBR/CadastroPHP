@@ -21,7 +21,6 @@ if ($_POST) {
     echo "O contato <b>{$nome}</b> foi salvo com sucesso!";
   } else {
     echo "Houve um erro ao salvar o contato.";
-    die;
   }
 } else {
   header("location: ./cadastro.php");

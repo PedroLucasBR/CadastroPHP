@@ -21,7 +21,6 @@ if ($_POST) {
         echo "O contato <b>{$nome}</b> foi alterado com sucesso!";
     } else {
         echo "Houve um erro ao atualizar o contato.";
-        die;
     }
 } else {
     header("location: ./cadastro.php");

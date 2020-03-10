@@ -44,14 +44,19 @@ class Pessoa
     return $select->fetchAll(PDO::FETCH_OBJ);
   }
 
-  public function getById($id, $conn)
+  public function getById($conn, $id)
   {
     $query = "SELECT * FROM contatos WHERE id = :r_id";
 
     $select = $conn->prepare($query);
     $select->bindParam(":r_id", $id);
-    $select->execute();
 
+    $result =  $select->execute();
+
+
+    if (!$select->rowCount()) {
+      return false;
+    }
 
     return $select->fetch(PDO::FETCH_OBJ);
   }
