@@ -46,14 +46,18 @@ $rows = $pessoa->buscarTodos($connection);
       </thead>
       <tbody>
 
-        <?php foreach ($rows as $contato) : ?>
+        <?php
+        $count = 1;
+        foreach ($rows as $contato) :
+        ?>
 
           <tr>
-            <th scope="row"><?php echo $contato->id ?></th>
+            <th scope="row"><?php echo $count++; ?></th>
             <td><?php echo $contato->nome ?></td>
             <td><?php echo $contato->email ?></td>
             <td><?php echo $contato->fone ?></td>
-            <td></td>
+            <td><a href="contato_editar.php?=<?php echo $contato->id ?>">Atualizar</a></td>
+            <td><a href="contato_excluir.php?=<?php echo $contato->id ?>">Excluir</a></td>
           </tr>
 
         <?php endforeach ?>

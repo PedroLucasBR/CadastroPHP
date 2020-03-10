@@ -36,7 +36,7 @@ class Pessoa
 
   public function buscarTodos($conn)
   {
-    $query = "SELECT nome, email, fone FROM contatos";
+    $query = "SELECT * FROM contatos";
 
     $select = $conn->prepare($query);
     $select->execute();
@@ -52,8 +52,7 @@ class Pessoa
     $select->bindParam(":r_id", $id);
     $select->execute();
 
-    if (!$select)
 
-      return $select->fetch(PDO::FETCH_OBJ);
+    return $select->fetch(PDO::FETCH_OBJ);
   }
 }
