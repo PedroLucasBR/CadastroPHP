@@ -11,6 +11,7 @@ if ($_POST) {
     $query = "UPDATE contatos SET nome = :r_nome, email = :r_email, fone = :r_fone WHERE id = :r_id";
 
     $update = $connection->prepare($query);
+    $update->bindParam(":r_id", $id);
     $update->bindParam(":r_nome", $nome);
     $update->bindParam(":r_email", $email);
     $update->bindParam(":r_fone", $telefone);

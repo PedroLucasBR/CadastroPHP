@@ -19,6 +19,7 @@ $rows = $pessoa->buscarTodos($connection);
 </head>
 
 <body>
+
   <div class="jumbotron">
     <h1 class="text-center">
       <?= $titulo ?>
@@ -28,12 +29,9 @@ $rows = $pessoa->buscarTodos($connection);
     </h1>
   </div>
 
-  <div class="container">
-    <div class="text-center">
-      <a href="./cadastro.php" class="btn btn-success">Cadastrar contato</a>
-    </div>
-    <br>
+  <br>
 
+  <div class="container">
     <table class="table">
       <thead class="thead-dark">
         <tr>
@@ -68,6 +66,11 @@ $rows = $pessoa->buscarTodos($connection);
     </table>
 
   </div>
+
+  <div class="text-center">
+    <a href="./cadastro.php" class="btn btn-success">Cadastrar contato</a>
+  </div>
+
 </body>
 
 </html>
