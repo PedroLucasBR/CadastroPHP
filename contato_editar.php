@@ -41,7 +41,7 @@ if ($_GET && $_GET["id"]) {
     <?php endif ?>
 
     <?php if (!isset($erro)) : ?>
-      <form action="./cadastro_editar_salvar.php" method="post">
+      <form action="./contato_editar_salvar.php" method="post">
         <div class="row">
           <div class="col">
             <label for="">Nome</label>
